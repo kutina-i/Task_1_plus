@@ -21,7 +21,7 @@ DArr::DArr(int size, int n) {
     }
 }
 
-//копирование
+//РєРѕРїРёСЂРѕРІР°РЅРёРµ
 DArr::DArr(const DArr& dinamic) {
     size = dinamic.size;
     arr = new int[size];
@@ -30,7 +30,7 @@ DArr::DArr(const DArr& dinamic) {
     }
 }
 
-//перемещение
+//РїРµСЂРµРјРµС‰РµРЅРёРµ
 DArr::DArr(DArr&& dinamic): arr(dinamic.arr), size(dinamic.size)
 {
     dinamic.arr = nullptr;
@@ -47,7 +47,7 @@ int DArr::getSize() const {
 
 int DArr::getElem(const int i) const {
     if (i >= size) {
-        throw std::exception("Низзя");
+        throw std::exception("РќРёР·Р·СЏ");
     }
     return arr[i];
 }
@@ -77,7 +77,7 @@ void DArr::resize(const int newSize) {
     }
 }
 
-//присваивание
+//РїСЂРёСЃРІР°РёРІР°РЅРёРµ
 DArr& DArr::operator=(const DArr& diname) {
     if (&diname != this && *this != diname)
     {
@@ -91,7 +91,7 @@ DArr& DArr::operator=(const DArr& diname) {
     return *this;
 }
 
-//перемещение
+//РїРµСЂРµРјРµС‰РµРЅРёРµ
 DArr& DArr::operator=(DArr&& dinamic)
 {
     if (&dinamic != this && *this != dinamic)
@@ -108,7 +108,7 @@ DArr& DArr::operator=(DArr&& dinamic)
 
 int& DArr::operator[](const int index) const {
     if (index >= getSize())
-        throw std::exception("Низзя");
+        throw std::exception("РќРёР·Р·СЏ");
     return arr[index];
 }
 
